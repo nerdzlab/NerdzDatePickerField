@@ -1,0 +1,16 @@
+PODS:
+  - NerdzDatePickerField (0.1.0)
+
+DEPENDENCIES:
+  - NerdzDatePickerField (from `../`)
+
+EXTERNAL SOURCES:
+  NerdzDatePickerField:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NerdzDatePickerField: bb0d4c899aa0c7b67ecb3dd2ff4fbe72ba096061
+
+PODFILE CHECKSUM: 4398dff6089ed22bf5bb384b9b7c2e1965adf4de
+
+COCOAPODS: 1.9.3

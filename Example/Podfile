@@ -1,0 +1,6 @@
+use_frameworks!
+target 'NerdzDatePickerField_Tests' do
+  pod 'NerdzDatePickerField', :path => '../'
+  
+  
+end

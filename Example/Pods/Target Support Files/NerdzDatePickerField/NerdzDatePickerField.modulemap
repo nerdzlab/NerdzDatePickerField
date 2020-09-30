@@ -1,0 +1,6 @@
+framework module NerdzDatePickerField {
+  umbrella header "NerdzDatePickerField-umbrella.h"
+
+  export *
+  module * { export * }
+}

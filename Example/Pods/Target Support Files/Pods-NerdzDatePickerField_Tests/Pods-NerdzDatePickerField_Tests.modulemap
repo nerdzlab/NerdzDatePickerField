@@ -1,0 +1,6 @@
+framework module Pods_NerdzDatePickerField_Tests {
+  umbrella header "Pods-NerdzDatePickerField_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
