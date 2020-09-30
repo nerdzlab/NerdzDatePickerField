@@ -1,7 +1,7 @@
 
 import UIKit
 
-public class NerdzDatePickereField: UITextField, UITextFieldDelegate {
+public class NerdzDatePickereField: UITextField {
     
     public var onDateSelected: ((Date) -> Void)?
     
@@ -81,13 +81,13 @@ public class NerdzDatePickereField: UITextField, UITextFieldDelegate {
             return
         }
         
-        delegate = self
         setupDatePicker()
+        setupTextField()
     }
     
     private func setupDatePicker() {
         if #available(iOS 14, *) {
-            superview?.addSubview(datePicker)
+            superview?.insertSubview(datePicker, aboveSubview: self)
             datePicker.translatesAutoresizingMaskIntoConstraints = false
             datePicker.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
             datePicker.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8).isActive = true
@@ -100,16 +100,13 @@ public class NerdzDatePickereField: UITextField, UITextFieldDelegate {
         }
     }
     
-    private func updateTextIfNeeded() {
-        text = formatter?.string(from: datePicker.date)
+    private func setupTextField() {
+        if #available(iOS 14, *) {
+            isUserInteractionEnabled = false
+        }
     }
     
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if #available(iOS 14, *) {
-            return false
-        }
-        else {
-            return true
-        }
+    private func updateTextIfNeeded() {
+        text = formatter?.string(from: datePicker.date)
     }
 }
