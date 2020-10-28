@@ -18,6 +18,9 @@ public class NerdzDatePickereField: UITextField {
         set {
             if #available(iOS 14, *) {
                 super.placeholder = nil
+            } 
+            else {
+                super.placeholder = newValue
             }
         }
         
@@ -31,6 +34,9 @@ public class NerdzDatePickereField: UITextField {
             if #available(iOS 14, *) {
                 super.text = nil
             }
+            else {
+                super.text = newValue
+            }
         }
         
         get {
@@ -43,6 +49,9 @@ public class NerdzDatePickereField: UITextField {
             if #available(iOS 14, *) {
                 super.attributedText = nil
             }
+            else {
+                super.attributedText = newValue
+            }
         }
         
         get {
@@ -54,6 +63,9 @@ public class NerdzDatePickereField: UITextField {
         set {
             if #available(iOS 14, *) {
                 super.attributedPlaceholder = nil
+            }
+            else {
+                super.attributedPlaceholder = newValue
             }
         }
         

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NerdzDatePickerField'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'A CSS-like way of creation and applying styles to view components'
   s.homepage         = 'https://github.com/nerdzlab/NerdzDatePickerField'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
